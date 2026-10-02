@@ -12,7 +12,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23100E0B'/%3E%3Cpath d='M16 5c.8 6 4.2 9.6 11 11-6.8 1.4-10.2 5-11 11-.8-6-4.2-9.6-11-11 6.8-1.4 10.2-5 11-11z' fill='%23C9A55E'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400&display=swap">
 <link rel="stylesheet" href="estilo.css">
 <script src="pagina.js" defer></script>
 </head>
@@ -55,38 +55,67 @@
 
 <main>
 
-  <!-- ═════ 1 · Promessa + preço ═════ -->
-  <section class="s-hero">
-    <div class="envoltura hero-grid">
-      <div class="hero-texto">
-        <p class="marca"><svg aria-hidden="true"><use href="#i-estrella"/></svg>Enoc Explicado</p>
-        <h1 class="hero-titulo">Todo el <span class="oro">LIBRO DE ENOC</span> explicado capítulo por capítulo</h1>
+  <!-- ═════ 1 · Folha de rosto (promessa + preço) ═════ -->
+  <section class="s-portada" id="inicio">
+    <div class="lampara-mouse" aria-hidden="true"><div class="lampara"></div></div>
 
-        <!-- [IMAGEN] no celular aparece aqui, entre o título e o texto -->
-        <figure class="slot hero-img hero-img--movil" data-material="hero.webp" data-alt="Material Enoc Explicado en PDF">
-          <div class="portada-abanico" aria-hidden="true">
-            <div class="folio folio--mini abanico-izq" data-cap="Capítulo 6" data-tit="Los Vigilantes"></div>
-            <div class="folio folio--portada abanico-centro">
-              <div class="portada-marco"><svg class="pm-estrella"><use href="#i-estrella"/></svg><p class="pm-a">El Libro de</p><p class="pm-b">Enoc</p><p class="pm-c">Explicado</p><p class="pm-d">Los 108 capítulos</p></div>
-            </div>
-            <div class="folio folio--mini abanico-der" data-cap="Capítulo 20" data-tit="Los siete arcángeles"></div>
-          </div>
-        </figure>
+    <div class="envoltura portada-envoltura">
+      <p class="marca">
+        <svg class="marca-estrella" aria-hidden="true"><use href="#i-estrella"/></svg>
+        Enoc Explicado
+      </p>
 
-        <p class="hero-sub">Explicaciones detalladas y fáciles de entender: cada uno de los <strong>108 capítulos</strong> del Libro de Enoc explicado de forma clara, sin complicaciones, y conectado con los versículos de tu Biblia. <span class="desde">Desde solo <strong>US$7,90</strong></span></p>
-        <a class="boton" href="#planes">QUIERO EL MÍO <svg aria-hidden="true"><use href="#i-flecha"/></svg></a>
+      <h1 class="portada-titulo" aria-label="Todo el Libro de Enoc explicado capítulo por capítulo">
+        <span class="tp-a tinta">Todo el</span>
+        <span class="tp-b tinta"><span>LIBRO DE</span> <span>ENOC</span></span>
+        <span class="tp-c tinta">explicado capítulo por capítulo</span>
+      </h1>
+
+      <div class="ornamento" aria-hidden="true">
+        <i></i><svg><use href="#i-estrella"/></svg><i></i>
       </div>
 
-      <!-- [IMAGEN] no computador fica à direita -->
-      <figure class="slot hero-img hero-img--desk" data-material="hero.webp" data-alt="Material Enoc Explicado en PDF" aria-hidden="true">
-        <div class="portada-abanico">
-          <div class="folio folio--mini abanico-izq" data-cap="Capítulo 6" data-tit="Los Vigilantes"></div>
-          <div class="folio folio--portada abanico-centro">
-            <div class="portada-marco"><svg class="pm-estrella"><use href="#i-estrella"/></svg><p class="pm-a">El Libro de</p><p class="pm-b">Enoc</p><p class="pm-c">Explicado</p><p class="pm-d">Los 108 capítulos</p></div>
-          </div>
-          <div class="folio folio--mini abanico-der" data-cap="Capítulo 20" data-tit="Los siete arcángeles"></div>
+      <div class="triptico">
+        <p class="portada-sub">Explicaciones detalladas y fáciles de entender: cada uno de los <strong>108 capítulos</strong> del Libro de Enoc explicado de forma clara, sin complicaciones, y conectado con los versículos de tu Biblia.</p>
+
+        <!-- [IMAGEN] — troca sozinha por materiais/hero-izquierda.webp, hero-portada.webp, hero-derecha.webp -->
+        <div class="folios" aria-hidden="true">
+          <figure class="slot folio-3d f-izq" data-material="hero-izquierda.webp" data-alt="Página interna del material Enoc Explicado">
+            <div class="folio">
+              <div class="folio-cab"><span>Capítulo 6</span><span>Enoc Explicado</span></div>
+              <p class="folio-tit">Los Vigilantes</p>
+              <div class="folio-grabado"></div>
+              <p class="folio-sec">Personajes y nombres</p>
+              <div class="folio-lineas"><i></i><i></i><i></i><i></i></div>
+            </div>
+          </figure>
+          <figure class="slot folio-3d f-centro" data-material="hero-portada.webp" data-alt="Portada del material Enoc Explicado">
+            <div class="folio folio--portada">
+              <div class="portada-marco">
+                <svg class="pm-estrella"><use href="#i-estrella"/></svg>
+                <p class="pm-a">El Libro de</p>
+                <p class="pm-b">Enoc</p>
+                <p class="pm-c">Explicado</p>
+                <p class="pm-d">Los 108 capítulos,<br>capítulo por capítulo</p>
+              </div>
+            </div>
+          </figure>
+          <figure class="slot folio-3d f-der" data-material="hero-derecha.webp" data-alt="Página interna del material Enoc Explicado">
+            <div class="folio">
+              <div class="folio-cab"><span>Capítulo 20</span><span>Enoc Explicado</span></div>
+              <p class="folio-tit">Los siete arcángeles</p>
+              <p class="folio-sec">Dónde aparece en tu Biblia</p>
+              <div class="folio-lineas"><i></i><i></i><i></i></div>
+              <div class="folio-grabado folio-grabado--bajo"></div>
+            </div>
+          </figure>
         </div>
-      </figure>
+
+        <div class="portada-precio">
+          <p class="desde">Desde solo <strong>US$7,90</strong></p>
+          <a class="boton" href="#planes">QUIERO EL MÍO <svg aria-hidden="true"><use href="#i-flecha"/></svg></a>
+        </div>
+      </div>
     </div>
   </section>
 
