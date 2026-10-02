@@ -78,6 +78,23 @@
     carrusel.querySelector(".carrusel-btn--der").addEventListener("click", function () {
       pista.scrollBy({ left: passo(), behavior: "smooth" });
     });
+
+    // passa sozinho a cada 3 s; pausa enquanto a pessoa mexe nele
+    var pausado = false;
+    ["pointerenter", "touchstart", "focusin"].forEach(function (ev) {
+      carrusel.addEventListener(ev, function () { pausado = true; }, { passive: true });
+    });
+    ["pointerleave", "focusout"].forEach(function (ev) {
+      carrusel.addEventListener(ev, function () { pausado = false; });
+    });
+    carrusel.addEventListener("touchend", function () {
+      setTimeout(function () { pausado = false; }, 4000);
+    }, { passive: true });
+    setInterval(function () {
+      if (pausado || doc.hidden) return;
+      var fim = pista.scrollLeft + pista.clientWidth >= pista.scrollWidth - 4;
+      pista.scrollTo({ left: fim ? 0 : pista.scrollLeft + passo(), behavior: "smooth" });
+    }, 3000);
   });
 
   /* 3. materiais reais */

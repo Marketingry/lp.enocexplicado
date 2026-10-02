@@ -4,8 +4,8 @@
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
-  --noche: #100E0B;
-  --noche-2: #1A1611;
+  --noche: #121b37;
+  --noche-2: #1a2548;
   --pergamino: #EEE5D1;
   --pergamino-2: #E4D8BE;
   --lapis: #16244A;
@@ -528,9 +528,6 @@ section { padding: clamp(48px, 8vw, 88px) 0; }
 .folio--plan { width: 130px; margin: 0 auto; }
 .precio { margin: 18px 0 0; font: 700 64px/1 var(--f-display); }
 .pago { margin: 4px 0 18px; font-size: 18px; color: var(--marfil-suave); }
-.atencion { margin: 22px 0 0; font-size: 19px; line-height: 1.4; }
-.atencion strong { color: var(--oro); }
-.atencion svg { display: block; width: 32px; height: 32px; margin: 10px auto 0; fill: none; stroke: var(--oro); stroke-width: 2; }
 
 .plan-completo { position: relative; background: var(--pergamino); color: var(--tinta); box-shadow: 0 0 0 4px var(--oro), 0 30px 60px -30px rgba(0, 0, 0, 0.9); padding-top: 0; }
 .plan-cinta {
@@ -684,3 +681,9 @@ section { padding: clamp(48px, 8vw, 88px) 0; }
 .precio--completo { font-size: 64px; }
 .sello span { font-size: 46px; }
 .tapa span { font-size: 40cqi; }
+
+/* itens que o Plano Básico NÃO inclui */
+.lista-check li.no-incluye { color: rgba(244, 237, 223, 0.55); }
+.lista-check li.no-incluye svg { stroke: #D9534F; }
+.lista-check li.no-incluye s { text-decoration-thickness: 2px; text-decoration-color: rgba(217, 83, 79, 0.85); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
