@@ -303,7 +303,16 @@ section { padding: clamp(48px, 8vw, 88px) 0; }
 }
 .portada-sub strong { color: var(--oro); font-weight: 700; }
 
-.folios { position: relative; height: clamp(340px, 50vh, 500px); perspective: 1600px; transition: transform 0.4s ease-out; }
+.folios { position: relative; display: flex; justify-content: center; align-items: flex-end; transition: transform 0.4s ease-out; }
+.hero-producto {
+  width: 100%;
+  max-width: 560px;
+  max-height: 56vh;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.55));
+  animation: aparecer 1.4s 0.4s ease both;
+}
 .folio-3d {
   position: absolute;
   bottom: 0;
@@ -340,7 +349,7 @@ section { padding: clamp(48px, 8vw, 88px) 0; }
 @media (prefers-reduced-motion: reduce) {
   .lampara { animation: none; }
   .tinta .letra { animation: none; opacity: 1; filter: none; transform: none; }
-  .ornamento, .portada-sub, .portada-precio, .folio-3d { animation: none; opacity: 1; }
+  .ornamento, .portada-sub, .portada-precio, .hero-producto { animation: none; opacity: 1; }
 }
 
 /* ═════ 2 · Material por dentro ═════ */
@@ -631,7 +640,8 @@ section { padding: clamp(48px, 8vw, 88px) 0; }
 
 @media (max-width: 860px) {
   .triptico { grid-template-columns: 1fr; gap: 28px; }
-  .folios { order: -1; height: clamp(280px, 40vh, 360px); }
+  .folios { order: -1; }
+  .hero-producto { max-width: 420px; max-height: none; }
   .portada-sub { max-width: none; order: 2; }
   .portada-precio { align-items: stretch; text-align: left; order: 1; }
   .portada-precio .boton { width: 100%; }
@@ -654,7 +664,7 @@ section { padding: clamp(48px, 8vw, 88px) 0; }
   .tp-c { font-size: 27px; }
   .ornamento { margin-top: 18px; width: 180px; }
   .triptico { gap: 20px; margin-top: 4px; }
-  .folios { height: 250px; }
+  .hero-producto { max-width: 340px; }
   .folio-3d { width: 44%; }
   .f-izq { --t: translateX(-106%) translateY(-4%) rotateY(14deg) rotate(-7deg); }
   .f-der { --t: translateX(6%) translateY(-4%) rotateY(-14deg) rotate(7deg); }
