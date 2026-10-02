@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "enoc",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["C:/Users/ryans/.claude/skills/sites-incriveis/scripts/servir.mjs", "--pasta", ".", "--porta", "4600"],
+      "port": 4600
+    }
+  ]
+}
