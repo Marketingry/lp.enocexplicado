@@ -12,12 +12,11 @@ não existe, aparece uma versão provisória feita em código (páginas e capas
 
 | Arquivo | Onde aparece | Formato ideal |
 |---|---|---|
-| hero-portada.webp | Topo: a capa no centro | retrato A4 (1:1,414), fundo transparente ou recortado |
-| hero-izquierda.webp | Topo: página à esquerda | retrato A4 |
-| hero-derecha.webp | Topo: página à direita | retrato A4 |
-| pagina-01.webp … pagina-06.webp | "Mira uno de los materiales": as 6 páginas que deslizam | retrato A4, uma página por arquivo |
+| hero.webp | Topo (o mockup principal do produto) | livre, fundo transparente |
+| pagina-01.webp … pagina-06.webp | "Mira uno de los materiales": o carrossel de páginas | retrato A4, uma página por arquivo |
+| antes-despues.webp | A imagem "ANTES / CON ENOC EXPLICADO" | livre |
 | item-01.webp | "Lo que recibes": imagem do Item 01 | livre, fundo transparente |
-| bono-01.webp … bono-06.webp | "¡Hay más!": as capas dos 6 bônus que se empilham | retrato A4 |
+| bono-01.webp … bono-06.webp | As capas dos 6 bônus | retrato A4 |
 | plan-basico.webp | Card do Plano Básico | retrato, fundo transparente |
 | plan-completo.webp | Card do Plano Completo | livre, fundo transparente |
 
@@ -25,6 +24,5 @@ Dica: exporte as páginas internas a ~1200px de altura e converta para .webp
 (qualidade 80). Cada arquivo deve ficar abaixo de ~250 KB, porque o tráfego
 vem do celular.
 
-O pico ("Antes → Con Enoc Explicado") NÃO usa imagem: é texto real no HTML.
-Para usar o capítulo real do material, troque o texto dentro de
-`<div class="antiguo-texto">` e do `<article class="explicado">` no index.html.
+Se não houver `antes-despues.webp`, a página mostra uma versão provisória em
+HTML (Enoc 6 + explicação de exemplo). Troque pelo conteúdo real do material.

@@ -192,3 +192,25 @@ quente no topo. Nada de banco de imagem.
 - Nenhum depoimento, número ou avaliação inventado.
 - Só adiciono referências bíblicas factuais nos nós do fio (Enoc 1:9, Génesis 6).
 - "ANTES / CON ENOC EXPLICADO" é construído em HTML com texto real, não imagem.
+
+
+---
+
+## Revisão 2026-10-02 — página simples para o público mais velho
+
+Feedback: a versão com cenas presas e animações ficou complexa de seguir para
+idosos. Pedido: página rápida, fácil de entender, poucas rolagens, na
+**estrutura validada do vídeo** e com a **copy validada**.
+
+Feito:
+- Removidas todas as animações de rolagem (cenas presas, fio de ouro, rolagem
+  suave, revelações). A página rola normal; nada se move sozinho.
+- Ordem exatamente a do vídeo: promessa + imagem + preço + botão → carrossel
+  de páginas (com setas grandes) → material único + 4 benefícios + Judas +
+  Antes/Depois + botão → Ideal para ti (4 cartões) + botão → Item 01 com
+  checklist → ¡Hay más! 6 bônus → Planos → Garantia → FAQ → rodapé.
+- Texto corrido de 19–20px, botões de 64–72px de altura, contraste alto,
+  números com algarismos claros (o "1" da Cormorant parecia "I").
+- Mantida a identidade: noite, pergaminho e ouro; Cormorant nos títulos,
+  Literata no texto.
+- Celular: 16 passos de rolagem (antes 35); desktop: 12 (antes 32).

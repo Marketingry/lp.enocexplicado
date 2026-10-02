@@ -12,507 +12,318 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23100E0B'/%3E%3Cpath d='M16 5c.8 6 4.2 9.6 11 11-6.8 1.4-10.2 5-11 11-.8-6-4.2-9.6-11-11 6.8-1.4 10.2-5 11-11z' fill='%23C9A55E'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&display=swap">
-<link rel="stylesheet" href="sites-incriveis.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400&display=swap">
 <link rel="stylesheet" href="estilo.css">
-<script src="sites-incriveis.js" defer></script>
-<script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js" defer></script>
 <script src="pagina.js" defer></script>
 </head>
 <body>
 
-<!-- Ícones (traço fino em ouro) — substituem os emojis da copy -->
+<!-- Ícones (substituem os emojis da copy) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <symbol id="i-reloj" viewBox="0 0 24 24"><path d="M6 3h12M6 21h12M7 3c0 4.5 4 5.6 5 9 1-3.4 5-4.5 5-9M7 21c0-4.5 4-5.6 5-9 1 3.4 5 4.5 5 9"/><path d="M10 18.5h4" opacity=".7"/></symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24"><path d="M6 3h12M6 21h12M7 3c0 4.5 4 5.6 5 9 1-3.4 5-4.5 5-9M7 21c0-4.5 4-5.6 5-9 1 3.4 5 4.5 5 9"/></symbol>
     <symbol id="i-sello" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.8 2.8 5.4-5.8"/></symbol>
     <symbol id="i-libro" viewBox="0 0 24 24"><path d="M3 5.6c3.2-1.3 6.2-1 9 1.1v13c-2.8-2.1-5.8-2.4-9-1.1zM21 5.6c-3.2-1.3-6.2-1-9 1.1v13c2.8-2.1 5.8-2.4 9-1.1z"/></symbol>
     <symbol id="i-vela" viewBox="0 0 24 24"><path d="M12 2.8c2.3 2.8 3.6 4.8 3.6 6.9a3.6 3.6 0 0 1-7.2 0c0-1.5.7-2.6 1.6-3.5.2 1.3.8 2.1 1.6 2.4.1-2 .4-3.9.4-5.8z"/><path d="M9.6 15h4.8v6.2H9.6zM8 21.2h8"/></symbol>
-    <symbol id="i-candado" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="1.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2.4"/></symbol>
+    <symbol id="i-candado" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="1.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
     <symbol id="i-rayo" viewBox="0 0 24 24"><path d="M13.2 2.6 5.6 13.4h5.8l-1 8 7.6-10.9h-5.9z"/></symbol>
     <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 2.8 19.5 5.6v5.6c0 4.6-3.2 8.3-7.5 10-4.3-1.7-7.5-5.4-7.5-10V5.6z"/><path d="M8.8 12l2.3 2.3 4.2-4.6"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M5.5 12.6l4 4L18.6 7"/></symbol>
     <symbol id="i-abajo" viewBox="0 0 24 24"><path d="M12 3.5v16M6 13.5l6 6 6-6"/></symbol>
     <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M4 12h15M13.5 6.5 19 12l-5.5 5.5"/></symbol>
+    <symbol id="i-izq" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+    <symbol id="i-der" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
     <symbol id="i-estrella" viewBox="0 0 24 24"><path d="M12 1.5c.7 5.3 3.4 8.4 10.5 10.5C15.4 14.1 12.7 17.2 12 22.5 11.3 17.2 8.6 14.1 1.5 12 8.6 9.9 11.3 6.8 12 1.5z"/></symbol>
+    <symbol id="i-pregunta" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 0 1 5 .9c0 1.8-2.5 2.2-2.5 3.8M12 17.2v.3"/></symbol>
+    <symbol id="i-corazon" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 7.4 4.2 4.2 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></symbol>
+    <symbol id="i-ojo" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
   </defs>
 </svg>
 
+<!-- Uma folha de material, reutilizada como imagem provisória -->
+<template id="t-folio">
+  <div class="folio">
+    <div class="folio-cab"><span class="folio-cap"></span><span>Enoc Explicado</span></div>
+    <p class="folio-tit"></p>
+    <div class="folio-grabado"></div>
+    <p class="folio-sec">Qué significa</p>
+    <div class="folio-lineas"><i></i><i></i><i></i><i></i></div>
+    <p class="folio-sec">Dónde aparece en tu Biblia</p>
+    <div class="folio-lineas"><i></i><i></i><i></i></div>
+  </div>
+</template>
+
 <main>
 
-  <!-- ═════════ CENA 1 · Folha de rosto ═════════ -->
-  <section class="s-portada" id="inicio" data-fx-fundo="#100E0B" data-fx-tinta="#F2EADB">
-    <div class="lampara-mouse" data-fx-mouse="36" aria-hidden="true"><div class="lampara"></div></div>
+  <!-- ═════ 1 · Promessa + preço ═════ -->
+  <section class="s-hero">
+    <div class="envoltura hero-grid">
+      <div class="hero-texto">
+        <p class="marca"><svg aria-hidden="true"><use href="#i-estrella"/></svg>Enoc Explicado</p>
+        <h1 class="hero-titulo">Todo el <span class="oro">LIBRO DE ENOC</span> explicado capítulo por capítulo</h1>
 
-    <div class="envoltura portada-envoltura">
-      <p class="marca">
-        <svg class="marca-estrella" aria-hidden="true"><use href="#i-estrella"/></svg>
-        Enoc Explicado
-      </p>
-
-      <h1 class="portada-titulo" aria-label="Todo el Libro de Enoc explicado capítulo por capítulo">
-        <span class="tp-a tinta">Todo el</span>
-        <span class="tp-b tinta"><span>LIBRO DE</span> <span>ENOC</span></span>
-        <span class="tp-c tinta">explicado capítulo por capítulo</span>
-      </h1>
-
-      <div class="ornamento" data-hilo="inicio" aria-hidden="true">
-        <i></i><svg><use href="#i-estrella"/></svg><i></i>
-      </div>
-
-      <div class="triptico">
-        <p class="portada-sub">Explicaciones detalladas y fáciles de entender: cada uno de los <strong>108 capítulos</strong> del Libro de Enoc explicado de forma clara, sin complicaciones, y conectado con los versículos de tu Biblia.</p>
-
-        <div class="folios-paralaxe" data-fx-paralaxe="0.08" data-hilo="punto" data-hilo-lado="centro" data-hilo-movil="riel">
-          <div class="folios" data-fx-mouse="12">
-            <!-- [IMAGEN] — troca sozinha por materiais/hero-izquierda.webp, hero-portada.webp, hero-derecha.webp -->
-            <figure class="slot folio-3d f-izq" data-material="hero-izquierda.webp" data-alt="Página interna del material Enoc Explicado">
-              <div class="folio">
-                <div class="folio-cab"><span>Capítulo 6</span><span>Enoc Explicado</span></div>
-                <p class="folio-tit">Los Vigilantes</p>
-                <div class="folio-grabado"></div>
-                <p class="folio-sec">Personajes y nombres</p>
-                <div class="folio-lineas"><i></i><i></i><i></i><i></i></div>
-              </div>
-            </figure>
-            <figure class="slot folio-3d f-centro" data-material="hero-portada.webp" data-alt="Portada del material Enoc Explicado">
-              <div class="folio folio--portada">
-                <div class="portada-marco">
-                  <svg class="pm-estrella" aria-hidden="true"><use href="#i-estrella"/></svg>
-                  <p class="pm-a">El Libro de</p>
-                  <p class="pm-b">Enoc</p>
-                  <p class="pm-c">Explicado</p>
-                  <p class="pm-d">Los 108 capítulos,<br>capítulo por capítulo</p>
-                </div>
-              </div>
-            </figure>
-            <figure class="slot folio-3d f-der" data-material="hero-derecha.webp" data-alt="Página interna del material Enoc Explicado">
-              <div class="folio">
-                <div class="folio-cab"><span>Capítulo 20</span><span>Enoc Explicado</span></div>
-                <p class="folio-tit">Los siete arcángeles</p>
-                <p class="folio-sec">Dónde aparece en tu Biblia</p>
-                <div class="folio-lineas"><i></i><i></i><i></i></div>
-                <div class="folio-grabado folio-grabado--bajo"></div>
-              </div>
-            </figure>
+        <!-- [IMAGEN] no celular aparece aqui, entre o título e o texto -->
+        <figure class="slot hero-img hero-img--movil" data-material="hero.webp" data-alt="Material Enoc Explicado en PDF">
+          <div class="portada-abanico" aria-hidden="true">
+            <div class="folio folio--mini abanico-izq" data-cap="Capítulo 6" data-tit="Los Vigilantes"></div>
+            <div class="folio folio--portada abanico-centro">
+              <div class="portada-marco"><svg class="pm-estrella"><use href="#i-estrella"/></svg><p class="pm-a">El Libro de</p><p class="pm-b">Enoc</p><p class="pm-c">Explicado</p><p class="pm-d">Los 108 capítulos</p></div>
+            </div>
+            <div class="folio folio--mini abanico-der" data-cap="Capítulo 20" data-tit="Los siete arcángeles"></div>
           </div>
-        </div>
+        </figure>
 
-        <div class="portada-precio">
-          <p class="desde">Desde solo <strong>US$7,90</strong></p>
-          <a class="boton" href="#planes">QUIERO EL MÍO <svg aria-hidden="true"><use href="#i-flecha"/></svg></a>
-        </div>
+        <p class="hero-sub">Explicaciones detalladas y fáciles de entender: cada uno de los <strong>108 capítulos</strong> del Libro de Enoc explicado de forma clara, sin complicaciones, y conectado con los versículos de tu Biblia. <span class="desde">Desde solo <strong>US$7,90</strong></span></p>
+        <a class="boton" href="#planes">QUIERO EL MÍO <svg aria-hidden="true"><use href="#i-flecha"/></svg></a>
       </div>
+
+      <!-- [IMAGEN] no computador fica à direita -->
+      <figure class="slot hero-img hero-img--desk" data-material="hero.webp" data-alt="Material Enoc Explicado en PDF" aria-hidden="true">
+        <div class="portada-abanico">
+          <div class="folio folio--mini abanico-izq" data-cap="Capítulo 6" data-tit="Los Vigilantes"></div>
+          <div class="folio folio--portada abanico-centro">
+            <div class="portada-marco"><svg class="pm-estrella"><use href="#i-estrella"/></svg><p class="pm-a">El Libro de</p><p class="pm-b">Enoc</p><p class="pm-c">Explicado</p><p class="pm-d">Los 108 capítulos</p></div>
+          </div>
+          <div class="folio folio--mini abanico-der" data-cap="Capítulo 20" data-tit="Los siete arcángeles"></div>
+        </div>
+      </figure>
     </div>
   </section>
 
-  <i class="marca-hilo" data-hilo="riel" aria-hidden="true"></i>
-
-  <!-- ═════════ CENA 2 · O códice aberto ═════════ -->
-  <section class="s-codice" data-fx-fixa data-fx-altura="3.2" data-fx-fundo="#100E0B" data-fx-tinta="#F2EADB" aria-labelledby="t-codice">
-    <div class="fx-palco">
-      <div class="codice-cab envoltura">
-        <h2 id="t-codice" class="codice-titulo">MIRA UNO DE LOS MATERIALES <em>QUE VAS A RECIBIR</em></h2>
-      </div>
-      <div class="codice-mesa">
-        <!-- [IMÁGENES: carrusel de páginas internas] — troca por materiais/pagina-01.webp … pagina-06.webp -->
-        <div class="codice-riel" data-fx="trilho">
-          <figure class="slot pagina-mat" data-material="pagina-01.webp" data-alt="Página interna del material: capítulo 1">
-            <div class="folio">
-              <div class="folio-cab"><span>Capítulo 1</span><span>Enoc Explicado</span></div>
-              <p class="folio-tit">La bendición de Enoc</p>
-              <div class="folio-grabado"></div>
-              <p class="folio-sec">Idea central</p>
-              <div class="folio-lineas"><i></i><i></i><i></i></div>
-              <p class="folio-sec">Qué significa</p>
-              <div class="folio-lineas"><i></i><i></i><i></i><i></i><i></i></div>
-            </div>
-          </figure>
-          <figure class="slot pagina-mat" data-material="pagina-02.webp" data-alt="Página interna del material: capítulo 6">
-            <div class="folio">
-              <div class="folio-cab"><span>Capítulo 6</span><span>Enoc Explicado</span></div>
-              <p class="folio-tit">Los Vigilantes</p>
-              <p class="folio-sec">Personajes y nombres</p>
-              <div class="folio-lista"><i></i><i></i><i></i><i></i></div>
-              <div class="folio-grabado folio-grabado--bajo"></div>
-              <div class="folio-lineas"><i></i><i></i><i></i></div>
-            </div>
-          </figure>
-          <figure class="slot pagina-mat" data-material="pagina-03.webp" data-alt="Página interna del material: capítulo 14">
-            <div class="folio">
-              <div class="folio-cab"><span>Capítulo 14</span><span>Enoc Explicado</span></div>
-              <p class="folio-tit">La visión del trono</p>
-              <div class="folio-grabado folio-grabado--alto"></div>
-              <p class="folio-sec">Dónde aparece en tu Biblia</p>
-              <div class="folio-lineas"><i></i><i></i><i></i><i></i></div>
-            </div>
-          </figure>
-          <figure class="slot pagina-mat" data-material="pagina-04.webp" data-alt="Página interna del material: capítulo 20">
-            <div class="folio">
-              <div class="folio-cab"><span>Capítulo 20</span><span>Enoc Explicado</span></div>
-              <p class="folio-tit">Los siete arcángeles</p>
-              <p class="folio-sec">Contexto histórico</p>
-              <div class="folio-lineas"><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="folio-grabado"></div>
-              <div class="folio-lineas"><i></i><i></i></div>
-            </div>
-          </figure>
-          <figure class="slot pagina-mat" data-material="pagina-05.webp" data-alt="Página interna del material: capítulo 72">
-            <div class="folio">
-              <div class="folio-cab"><span>Capítulo 72</span><span>Enoc Explicado</span></div>
-              <p class="folio-tit">Las luces del cielo</p>
-              <div class="folio-grabado folio-grabado--alto"></div>
-              <p class="folio-sec">Curiosidades</p>
-              <div class="folio-lineas"><i></i><i></i><i></i></div>
-            </div>
-          </figure>
-          <figure class="slot pagina-mat" data-material="pagina-06.webp" data-alt="Página interna del material: espacio para anotaciones">
-            <div class="folio">
-              <div class="folio-cab"><span>Capítulo 91</span><span>Enoc Explicado</span></div>
-              <p class="folio-tit">Palabras a sus hijos</p>
-              <p class="folio-sec">Para reflexionar</p>
-              <div class="folio-lineas"><i></i><i></i><i></i></div>
-              <p class="folio-sec">Espacio para anotaciones</p>
-              <div class="folio-renglones"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            </div>
-          </figure>
-          <span class="codice-fin" aria-hidden="true"></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <i class="marca-hilo" data-hilo="riel" aria-hidden="true"></i>
-
-  <!-- ═════════ CENA 3 · Con tu Biblia al lado ═════════ -->
-  <section class="s-biblia" data-fx-fundo="#EEE5D1" data-fx-tinta="#1D1812">
+  <!-- ═════ 2 · Veja o material por dentro ═════ -->
+  <section class="s-material" aria-labelledby="t-material">
     <div class="envoltura">
-      <h2 class="gran-frase" data-fx="subir">Vas a recibir un material único, <em>totalmente ilustrado y organizado</em> para entender el Libro de Enoc</h2>
+      <h2 id="t-material" class="titulo-seccion">MIRA UNO DE LOS MATERIALES QUE VAS A RECIBIR</h2>
+    </div>
+    <div class="carrusel" data-carrusel>
+      <button class="carrusel-btn carrusel-btn--izq" type="button" aria-label="Página anterior"><svg aria-hidden="true"><use href="#i-izq"/></svg></button>
+      <!-- [IMÁGENES: carrusel de páginas internas] — materiais/pagina-01.webp … pagina-06.webp -->
+      <div class="carrusel-pista" tabindex="0" aria-label="Páginas internas del material">
+        <figure class="slot pagina" data-material="pagina-01.webp" data-alt="Página interna: capítulo 1"><div class="folio" data-cap="Capítulo 1" data-tit="La bendición de Enoc"></div></figure>
+        <figure class="slot pagina" data-material="pagina-02.webp" data-alt="Página interna: capítulo 6"><div class="folio" data-cap="Capítulo 6" data-tit="Los Vigilantes"></div></figure>
+        <figure class="slot pagina" data-material="pagina-03.webp" data-alt="Página interna: capítulo 14"><div class="folio" data-cap="Capítulo 14" data-tit="La visión del trono"></div></figure>
+        <figure class="slot pagina" data-material="pagina-04.webp" data-alt="Página interna: capítulo 20"><div class="folio" data-cap="Capítulo 20" data-tit="Los siete arcángeles"></div></figure>
+        <figure class="slot pagina" data-material="pagina-05.webp" data-alt="Página interna: capítulo 72"><div class="folio" data-cap="Capítulo 72" data-tit="Las luces del cielo"></div></figure>
+        <figure class="slot pagina" data-material="pagina-06.webp" data-alt="Página interna: capítulo 91"><div class="folio" data-cap="Capítulo 91" data-tit="Palabras a sus hijos"></div></figure>
+      </div>
+      <button class="carrusel-btn carrusel-btn--der" type="button" aria-label="Página siguiente"><svg aria-hidden="true"><use href="#i-der"/></svg></button>
+    </div>
+  </section>
+
+  <!-- ═════ 3 · Material único + benefícios + Antes/Depois ═════ -->
+  <section class="s-unico">
+    <div class="envoltura estrecha">
+      <h2 class="titulo-seccion">Vas a recibir un material único, <span class="oro">totalmente ilustrado y organizado</span> para entender el Libro de Enoc</h2>
 
       <ul class="beneficios">
-        <li data-fx="subir"><svg class="ico" aria-hidden="true"><use href="#i-reloj"/></svg><span>Lectura rápida</span></li>
-        <li data-fx="subir" data-fx-atraso="120"><svg class="ico" aria-hidden="true"><use href="#i-sello"/></svg><span>Fácil de entender</span></li>
-        <li data-fx="subir" data-fx-atraso="240"><svg class="ico" aria-hidden="true"><use href="#i-libro"/></svg><span>Con tu Biblia al lado</span></li>
-        <li data-fx="subir" data-fx-atraso="360"><svg class="ico" aria-hidden="true"><use href="#i-vela"/></svg><span>Con respeto a la fe</span></li>
+        <li><svg aria-hidden="true"><use href="#i-reloj"/></svg>Lectura rápida</li>
+        <li><svg aria-hidden="true"><use href="#i-sello"/></svg>Fácil de entender</li>
+        <li><svg aria-hidden="true"><use href="#i-libro"/></svg>Con tu Biblia al lado</li>
+        <li><svg aria-hidden="true"><use href="#i-vela"/></svg>Con respeto a la fe</li>
       </ul>
 
-      <i class="marca-hilo" data-hilo="riel" aria-hidden="true"></i>
-      <div class="judas">
-        <p class="judas-intro" data-fx="surgir">Simple, práctico y fácil. Hasta la carta de Judas lo cita <span class="judas-ref">(Judas 1:14-15)</span>: ahora vas a entender por qué.</p>
-        <i class="marca-hilo" data-hilo="riel" aria-hidden="true"></i>
+      <p class="judas">Simple, práctico y fácil. Hasta la carta de Judas lo cita <span class="oro">(Judas 1:14-15)</span>: ahora vas a entender por qué.</p>
 
-        <div class="fichas">
-          <blockquote class="ficha" data-nudo-de="1">
-            <span class="ojal" data-hilo="nudo" aria-hidden="true"></span>
-            <cite>Libro de Enoc 1:9</cite>
-            <p>«Y he aquí que viene con diez millares de sus santos, para hacer juicio sobre todos…»</p>
-          </blockquote>
-          <blockquote class="ficha" data-nudo-de="1">
-            <span class="ojal" data-hilo="nudo" data-nudo="1" aria-hidden="true"></span>
-            <cite>Judas 1:14-15</cite>
-            <p>«He aquí, vino el Señor con sus santas decenas de millares, para hacer juicio contra todos…»</p>
-          </blockquote>
+      <!-- [IMAGEN: ANTES / CON ENOC EXPLICADO] — troca por materiais/antes-despues.webp.
+           Versão provisória em HTML: Enoc 6:1-3 (tradução própria de R. H. Charles, 1917, domínio público) e explicação de exemplo. -->
+      <figure class="slot antes-despues" data-material="antes-despues.webp" data-alt="Antes y con Enoc Explicado">
+        <div class="ad-grid">
+          <div class="ad-antes">
+            <p class="ad-rotulo">ANTES</p>
+            <p class="ad-texto"><sup>1</sup>Y sucedió que, cuando los hijos de los hombres se multiplicaron, en aquellos días les nacieron hijas hermosas y bellas. <sup>2</sup>Y los ángeles, hijos del cielo, las vieron y las desearon, y se dijeron unos a otros: «Vamos, escojamos esposas de entre las hijas de los hombres y engendremos hijos». <sup>3</sup>Y Semyaza, que era su jefe, les dijo: «Temo que no queráis en verdad cometer este acto…»</p>
+          </div>
+          <div class="ad-despues">
+            <p class="ad-rotulo">CON ENOC EXPLICADO</p>
+            <p class="ad-cap">Capítulo 6 · Los Vigilantes</p>
+            <p class="ad-sec">Qué significa</p>
+            <p>Enoc cuenta con detalle lo que Génesis 6 resume en pocas líneas: según este libro, los «hijos de Dios» eran ángeles, llamados Vigilantes.</p>
+            <p class="ad-sec">Dónde aparece en tu Biblia</p>
+            <p class="citas"><span class="cita">Génesis 6:1-4</span><span class="cita">Judas 1:6</span></p>
+          </div>
         </div>
-      </div>
+      </figure>
+
+      <p class="frase-fuerte">Hoy mismo vas a entender el Libro de Enoc con este material inédito. <span class="oro">¡Se acabaron las dudas!</span></p>
+      <a class="boton" href="#planes">QUIERO EL MÍO <svg aria-hidden="true"><use href="#i-flecha"/></svg></a>
     </div>
   </section>
 
-  <i class="marca-hilo" data-hilo="riel" aria-hidden="true"></i>
-
-  <!-- ═════════ CENA 4 · PICO: Antes → Con Enoc Explicado ═════════ -->
-  <!-- [IMAGEN: ANTES / CON ENOC EXPLICADO] construída em HTML com texto real.
-       TEXTO PROVISÓRIO: Enoc 6:1-8 (tradução própria a partir de R. H. Charles, 1917, domínio público)
-       e a explicação ao lado — substituir pela página real do material. -->
-  <section class="s-pico" id="antes" data-fx-fixa data-fx-altura="5.5" data-fx-fundo="#100E0B" data-fx-tinta="#F2EADB" aria-labelledby="t-pico">
-    <div class="fx-palco">
-      <h2 id="t-pico" class="sr">Antes y con Enoc Explicado</h2>
-
-      <div class="pico-rotulos" aria-hidden="true">
-        <p class="r-antes">ANTES</p>
-        <p class="r-despues-mini">CON ENOC EXPLICADO</p>
-        <p class="pico-ref">Libro de Enoc · Capítulo 6</p>
-      </div>
-      <p class="r-despues" aria-hidden="true">Con Enoc<br><em>Explicado</em></p>
-
-      <div class="antiguo">
-        <div class="antiguo-texto">
-          <p><sup>1</sup>Y sucedió que, cuando los hijos de los hombres se multiplicaron, en aquellos días les nacieron hijas hermosas y bellas. <sup>2</sup>Y <span class="clave">los ángeles, hijos del cielo,</span> las vieron y las desearon, y se dijeron unos a otros: «Vamos, escojamos esposas de entre las hijas de los hombres y engendremos hijos». <sup>3</sup>Y <span class="nombre">Semyaza</span>, que era su jefe, les dijo: «Temo que no queráis en verdad cometer este acto, y que solo yo tenga que pagar la pena de un gran pecado». <sup>4</sup>Y todos le respondieron: «Hagamos todos un juramento, y comprometámonos bajo maldición mutua a no abandonar este plan, sino a llevarlo a cabo». <sup>5</sup>Entonces juraron todos juntos y se comprometieron bajo maldición mutua. <sup>6</sup>Y eran en total <span class="clave">doscientos</span>, los que descendieron en los días de <span class="nombre clave">Jared</span> sobre la cumbre del <span class="clave">monte Hermón</span>; y lo llamaron monte Hermón porque sobre él habían jurado y se habían comprometido bajo maldición mutua. <sup>7</sup>Y estos son los nombres de sus jefes: <span class="nombre clave">Semyaza</span>, su jefe, <span class="nombre">Arakiba</span>, <span class="nombre">Rameel</span>, <span class="nombre">Kokabiel</span>, <span class="nombre">Tamiel</span>, <span class="nombre">Ramiel</span>, <span class="nombre">Danel</span>, <span class="nombre">Ezequeel</span>, <span class="nombre">Baraquiel</span>, <span class="nombre">Asael</span>, <span class="nombre">Armaros</span>, <span class="nombre">Batarel</span>, <span class="nombre">Ananel</span>, <span class="nombre">Zaquiel</span>, <span class="nombre">Samsapeel</span>, <span class="nombre">Satarel</span>, <span class="nombre">Turel</span>, <span class="nombre">Yomyael</span>, <span class="nombre">Sariel</span>. <sup>8</sup>Estos son sus jefes de decenas.</p>
-        </div>
-      </div>
-
-      <div class="velo" aria-hidden="true"></div>
-      <svg class="hilo-local" aria-hidden="true"><path pathLength="1"/></svg>
-
-      <article class="explicado">
-        <span class="explicado-marco" aria-hidden="true"></span>
-        <header class="exp-cab">
-          <p class="exp-cap">Capítulo 6</p>
-          <h3 class="exp-titulo">Los Vigilantes</h3>
-        </header>
-        <div class="exp-bloque" style="--n:0">
-          <h4>Idea central</h4>
-          <p>Doscientos ángeles deciden bajar del cielo y se comprometen con un juramento.</p>
-        </div>
-        <div class="exp-bloque" style="--n:1">
-          <h4>Qué significa</h4>
-          <p>Enoc cuenta con detalle lo que Génesis 6 resume en pocas líneas: según este libro, los «hijos de Dios» que se unieron a las hijas de los hombres eran ángeles, llamados Vigilantes.</p>
-        </div>
-        <div class="exp-bloque" style="--n:2">
-          <h4>Personajes y nombres</h4>
-          <dl class="personajes">
-            <div><dt>Semyaza</dt><dd>jefe de los Vigilantes</dd></div>
-            <div><dt>Jared</dt><dd>padre de Enoc (Génesis 5:18)</dd></div>
-            <div><dt>Monte Hermón</dt><dd>donde hicieron el juramento</dd></div>
-          </dl>
-        </div>
-        <div class="exp-bloque" style="--n:3">
-          <h4>Dónde aparece en tu Biblia</h4>
-          <p class="citas"><span class="cita cita--nudo" id="ref-gen6">Génesis 6:1-4</span><span class="cita">Judas 1:6</span></p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- resolução do pico -->
-  <section class="s-dudas" data-fx-fundo="#EEE5D1" data-fx-tinta="#1D1812">
-    <i class="marca-hilo" data-hilo="riel" aria-hidden="true"></i>
+  <!-- ═════ 4 · Ideal para ti ═════ -->
+  <section class="s-ideal">
     <div class="envoltura">
-      <h2 class="dudas-frase"><span data-fx="palavras" data-fx-duracao="900">Hoy mismo vas a entender el Libro de Enoc con este material inédito.</span> <em class="dudas-grito" data-fx="subir" data-fx-atraso="700">¡Se acabaron las dudas!</em></h2>
-      <a class="boton" href="#planes" data-fx="surgir" data-fx-atraso="900">QUIERO EL MÍO <svg aria-hidden="true"><use href="#i-flecha"/></svg></a>
-    </div>
-  </section>
-
-  <i class="marca-hilo" data-hilo="riel" aria-hidden="true"></i>
-
-  <!-- ═════════ CENA 5 · Ideal para ti ═════════ -->
-  <section class="s-ideal" data-fx-fundo="#EEE5D1" data-fx-tinta="#1D1812">
-    <div class="envoltura ideal-grid">
-      <h2 class="ideal-titulo">IDEAL <span class="junto">PARA TI</span> <em>QUE DESEAS:</em></h2>
-      <ol class="ideal-lista">
-        <li data-fx="subir"><i class="marca-abs" data-hilo="nada" data-hilo-movil="riel" aria-hidden="true"></i><span class="cuenta" data-hilo="punto" data-hilo-lado="centro" aria-hidden="true">I</span>
+      <h2 class="titulo-seccion">IDEAL PARA TI QUE DESEAS:</h2>
+      <ul class="ideal">
+        <li>
+          <svg aria-hidden="true"><use href="#i-ojo"/></svg>
           <h3>Entender el Libro de Enoc de verdad</h3>
-          <p>Cada capítulo explicado de forma clara, sin perderte entre nombres y visiones.</p></li>
-        <li data-fx="subir"><span class="cuenta" data-hilo="punto" data-hilo-lado="centro" aria-hidden="true">II</span>
+          <p>Cada capítulo explicado de forma clara, sin perderte entre nombres y visiones.</p>
+        </li>
+        <li>
+          <svg aria-hidden="true"><use href="#i-pregunta"/></svg>
           <h3>Resolver tus dudas</h3>
-          <p>¿Quiénes eran los Vigilantes? ¿Y los gigantes de Génesis 6? Las respuestas, capítulo por capítulo.</p></li>
-        <li data-fx="subir"><span class="cuenta" data-hilo="punto" data-hilo-lado="centro" aria-hidden="true">III</span>
+          <p>¿Quiénes eran los Vigilantes? ¿Y los gigantes de Génesis 6? Las respuestas, capítulo por capítulo.</p>
+        </li>
+        <li>
+          <svg aria-hidden="true"><use href="#i-libro"/></svg>
           <h3>Leer sin miedo y con tu Biblia al lado</h3>
-          <p>Ves exactamente dónde se conecta Enoc con los versículos que ya conoces.</p></li>
-        <li data-fx="subir"><span class="cuenta" data-hilo="punto" data-hilo-lado="centro" aria-hidden="true">IV</span>
+          <p>Ves exactamente dónde se conecta Enoc con los versículos que ya conoces.</p>
+        </li>
+        <li>
+          <svg aria-hidden="true"><use href="#i-corazon"/></svg>
           <h3>Fortalecer tu fe</h3>
-          <p>Un estudio que te acerca a la Palabra y te ayuda a responder cuando te pregunten.</p></li>
-      </ol>
-    </div>
-    <div class="envoltura ideal-cta">
-      <a class="boton" href="#planes" data-fx="surgir">QUIERO EL MÍO <svg aria-hidden="true"><use href="#i-flecha"/></svg></a>
+          <p>Un estudio que te acerca a la Palabra y te ayuda a responder cuando te pregunten.</p>
+        </li>
+      </ul>
+      <div class="centro"><a class="boton" href="#planes">QUIERO EL MÍO <svg aria-hidden="true"><use href="#i-flecha"/></svg></a></div>
     </div>
   </section>
 
-  <!-- ═════════ CENA 6 · Lo que recibes + ¡Hay más! ═════════ -->
-  <section class="s-recibes" id="recibes" data-fx-fundo="#EEE5D1" data-fx-tinta="#1D1812">
+  <!-- ═════ 5 · O que você recebe ═════ -->
+  <section class="s-recibes">
     <div class="envoltura">
-      <p class="rotulo rotulo-centro" data-fx="surgir">LO QUE RECIBES AL ADQUIRIR TU MATERIAL</p>
+      <p class="etiqueta">LO QUE RECIBES AL ADQUIRIR TU MATERIAL</p>
 
-      <div class="item01">
+      <article class="item01">
         <!-- [IMAGEN] — troca por materiais/item-01.webp -->
-        <figure class="slot item01-img" data-material="item-01.webp" data-alt="Los 108 capítulos del Libro de Enoc explicados" data-fx="esquerda">
-          <div class="pila">
-            <div class="folio pila-a"><div class="folio-cab"><span>Capítulo 72</span><span>Enoc Explicado</span></div><p class="folio-tit">Las luces del cielo</p><div class="folio-lineas"><i></i><i></i><i></i></div></div>
-            <div class="folio pila-b"><div class="folio-cab"><span>Capítulo 6</span><span>Enoc Explicado</span></div><p class="folio-tit">Los Vigilantes</p><div class="folio-grabado"></div></div>
-            <div class="folio folio--portada pila-c">
-              <div class="portada-marco">
-                <svg class="pm-estrella" aria-hidden="true"><use href="#i-estrella"/></svg>
-                <p class="pm-a">El Libro de</p><p class="pm-b">Enoc</p><p class="pm-c">Explicado</p>
-                <p class="pm-d">Los 108 capítulos,<br>capítulo por capítulo</p>
-              </div>
+        <figure class="slot item01-img" data-material="item-01.webp" data-alt="Los 108 capítulos del Libro de Enoc explicados">
+          <div class="portada-abanico" aria-hidden="true">
+            <div class="folio folio--mini abanico-izq" data-cap="Capítulo 72" data-tit="Las luces del cielo"></div>
+            <div class="folio folio--portada abanico-centro">
+              <div class="portada-marco"><svg class="pm-estrella"><use href="#i-estrella"/></svg><p class="pm-a">El Libro de</p><p class="pm-b">Enoc</p><p class="pm-c">Explicado</p><p class="pm-d">Los 108 capítulos</p></div>
             </div>
+            <div class="folio folio--mini abanico-der" data-cap="Capítulo 1" data-tit="La bendición de Enoc"></div>
           </div>
         </figure>
-
         <div class="item01-texto">
           <p class="item-num">ITEM 01</p>
-          <p class="cifra" aria-hidden="true"><span data-fx="contar" data-fx-fim="108" data-fx-duracao="2200">0</span></p>
           <h2 class="item-titulo">Los 108 capítulos del Libro de Enoc</h2>
           <p class="item-sub">Explicados capítulo por capítulo</p>
-          <ul class="checklist">
-            <li data-fx="subir"><i class="marca-abs" data-hilo="punto" data-hilo-lado="izq" data-hilo-dx="-40" data-hilo-movil="riel" aria-hidden="true"></i><span class="tilde" data-hilo="punto" data-hilo-lado="centro"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Los 108 capítulos completos, en letra grande</li>
-            <li data-fx="subir"><span class="tilde"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Idea central de cada capítulo</li>
-            <li data-fx="subir"><span class="tilde"><svg aria-hidden="true"><use href="#i-check"/></svg></span>“Qué significa”: explicación sencilla</li>
-            <li data-fx="subir"><span class="tilde"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Personajes y nombres de cada capítulo</li>
-            <li data-fx="subir"><span class="tilde"><svg aria-hidden="true"><use href="#i-check"/></svg></span>“Dónde aparece en tu Biblia”</li>
-            <li data-fx="subir"><span class="tilde"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Contexto histórico</li>
-            <li data-fx="subir"><span class="tilde"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Para reflexionar y aplicar en tu día a día</li>
-            <li data-fx="subir"><span class="tilde"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Curiosidades</li>
-            <li data-fx="subir"><span class="tilde"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Ilustraciones en el material</li>
-            <li data-fx="subir"><span class="tilde" data-hilo="punto" data-hilo-lado="centro"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Espacio para anotaciones</li>
+          <ul class="lista-check">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Los 108 capítulos completos, en letra grande</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Idea central de cada capítulo</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>“Qué significa”: explicación sencilla</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Personajes y nombres de cada capítulo</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>“Dónde aparece en tu Biblia”</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Contexto histórico</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Para reflexionar y aplicar en tu día a día</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Curiosidades</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Ilustraciones en el material</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Espacio para anotaciones</li>
           </ul>
-          <p class="y-mas" data-fx="surgir">Y mucho más…</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <i class="marca-hilo" data-hilo="riel" aria-hidden="true"></i>
-
-  <section class="s-bonos" data-fx-fixa data-fx-altura="5" data-fx-etapas="6" data-fx-fundo="#EEE5D1" data-fx-tinta="#1D1812" aria-labelledby="t-bonos">
-    <div class="fx-palco">
-      <div class="bonos-escena envoltura">
-        <header class="bonos-cab">
-          <p class="hay-mas">¡HAY MÁS!</p>
-          <h2 id="t-bonos">También vas a recibir… <em>6 bonos exclusivos</em></h2>
-        </header>
-
-        <div class="bonos-mesa" aria-hidden="true">
-          <!-- troca por materiais/bono-01.webp … bono-06.webp -->
-          <figure class="slot tapa" style="--i:1" data-material="bono-01.webp" data-alt=""><div class="tapa-fallback t-noche"><span class="tapa-num">1</span><p>Plan de lectura de 30 días</p></div></figure>
-          <figure class="slot tapa" style="--i:2" data-material="bono-02.webp" data-alt=""><div class="tapa-fallback t-pergamino"><span class="tapa-num">2</span><p>¿Qué es y qué no es el Libro de Enoc?</p></div></figure>
-          <figure class="slot tapa" style="--i:3" data-material="bono-03.webp" data-alt=""><div class="tapa-fallback t-lapis"><span class="tapa-num">3</span><p>Glosario de nombres y lugares</p></div></figure>
-          <figure class="slot tapa" style="--i:4" data-material="bono-04.webp" data-alt=""><div class="tapa-fallback t-noche"><span class="tapa-num">4</span><p>Los 7 arcángeles de Enoc</p></div></figure>
-          <figure class="slot tapa" style="--i:5" data-material="bono-05.webp" data-alt=""><div class="tapa-fallback t-pergamino"><span class="tapa-num">5</span><p>El Padre Nuestro en arameo</p></div></figure>
-          <figure class="slot tapa" style="--i:6" data-material="bono-06.webp" data-alt=""><div class="tapa-fallback t-lapis"><span class="tapa-num">6</span><p>Cuaderno de anotaciones</p></div></figure>
-        </div>
-
-        <div class="bonos-textos">
-          <article class="fx-etapa bono">
-            <p class="bono-num">#1 – ¡BONO HOY!</p>
-            <h3>Plan de lectura de 30 días</h3>
-            <p class="bono-sub">Paso a paso</p>
-            <p>Sabrás exactamente qué leer cada día para terminar el libro sin perderte.</p>
-          </article>
-          <article class="fx-etapa bono">
-            <p class="bono-num">#2 – ¡BONO HOY!</p>
-            <h3>¿Qué es y qué no es el Libro de Enoc?</h3>
-            <p class="bono-sub">Léelo con tranquilidad</p>
-            <p>Una introducción corta para leerlo sin miedo y saber responder cuando te pregunten.</p>
-          </article>
-          <article class="fx-etapa bono">
-            <p class="bono-num">#3 – ¡BONO HOY!</p>
-            <h3>Glosario de nombres y lugares</h3>
-            <p class="bono-sub">Quién es quién</p>
-            <p>Todos los ángeles, personajes y lugares de Enoc explicados en una línea.</p>
-          </article>
-          <article class="fx-etapa bono">
-            <p class="bono-num">#4 – ¡BONO HOY!</p>
-            <h3>Los 7 arcángeles de Enoc</h3>
-            <p class="bono-sub">Capítulo 20 explicado</p>
-            <p>Sus nombres y su misión, según el Libro de Enoc.</p>
-          </article>
-          <article class="fx-etapa bono">
-            <p class="bono-num">#5 – ¡BONO HOY!</p>
-            <h3>El Padre Nuestro en arameo</h3>
-            <p class="bono-sub">Explicado línea por línea</p>
-            <p>La oración que Jesús enseñó, en el idioma que Él hablaba.</p>
-          </article>
-          <article class="fx-etapa bono">
-            <p class="bono-num">#6 – ¡BONO HOY!</p>
-            <h3>Cuaderno de anotaciones</h3>
-            <p class="bono-sub">Para imprimir</p>
-            <p>Para anotar lo que aprendes en cada capítulo junto a tu Biblia.</p>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <i class="marca-hilo" data-hilo="riel" aria-hidden="true"></i>
-
-  <!-- ═════════ CENA 7 · O céu aberto ═════════ -->
-  <section class="s-cielo" id="planes" data-fx-fundo="#0F1A36" data-fx-tinta="#F2EADB">
-    <canvas class="estrellas" aria-hidden="true"></canvas>
-
-    <div class="envoltura">
-      <h2 class="elige" data-fx="subir"><span>ELIGE</span> la mejor opción para ti:</h2>
-      <i class="marca-hilo" data-hilo="riel" aria-hidden="true"></i>
-
-      <article class="plan plan-basico" data-fx="subir">
-        <!-- [IMAGEN] — troca por materiais/plan-basico.webp -->
-        <figure class="slot plan-img" data-material="plan-basico.webp" data-alt="Plan Básico: los 108 capítulos en PDF">
-          <div class="folio folio--portada folio--mini">
-            <div class="portada-marco">
-              <svg class="pm-estrella" aria-hidden="true"><use href="#i-estrella"/></svg>
-              <p class="pm-a">El Libro de</p><p class="pm-b">Enoc</p><p class="pm-c">Explicado</p>
-            </div>
-          </div>
-        </figure>
-        <div class="plan-cuerpo">
-          <h3 class="plan-nombre">Plan Básico</h3>
-          <ul class="plan-lista">
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Los 108 capítulos del Libro de Enoc explicados (en PDF)</li>
-          </ul>
-          <p class="precio precio--basico">US$7,90</p>
-          <p class="pago">Pago único</p>
-          <!-- TROCAR pelo link real do checkout do Plano Básico -->
-          <a class="boton boton--sec" href="#checkout-basico" data-hilo="punto" data-hilo-lado="centro">QUIERO SOLO EL BÁSICO</a>
+          <p class="y-mas">Y mucho más…</p>
         </div>
       </article>
 
-      <p class="atencion" data-fx="surgir"><strong>ATENCIÓN:</strong> tenemos una oferta aún más <strong>VENTAJOSA</strong> para ti. Mírala abajo.</p>
-      <span class="flecha-envoltura" data-hilo="punto" data-hilo-lado="centro" aria-hidden="true"><svg class="atencion-flecha"><use href="#i-abajo"/></svg></span>
+      <div class="hay-mas">
+        <p class="hay-mas-a">¡HAY MÁS!</p>
+        <p class="hay-mas-b">También vas a recibir…</p>
+        <h2 class="hay-mas-c">6 bonos exclusivos</h2>
+      </div>
 
-      <article class="plan plan-completo" data-fx="crescer" data-nudo-de="3">
-        <span class="ojal ojal--plan" data-hilo="nudo" data-nudo="3" aria-hidden="true"></span>
-        <p class="cinta"><svg aria-hidden="true"><use href="#i-check"/></svg>TODOS LOS BONOS INCLUIDOS</p>
-        <h3 class="plan-nombre plan-nombre--completo">PLAN COMPLETO</h3>
-        <div class="completo-grid">
-          <!-- [IMAGEN] — troca por materiais/plan-completo.webp -->
-          <figure class="slot plan-img plan-img--completo" data-material="plan-completo.webp" data-alt="Plan Completo: todos los materiales en PDF">
-            <div class="abanico">
-              <div class="tapa-fallback t-noche ab-1"><span class="tapa-num">1</span></div>
-              <div class="tapa-fallback t-lapis ab-2"><span class="tapa-num">3</span></div>
-              <div class="tapa-fallback t-pergamino ab-3"><span class="tapa-num">5</span></div>
-              <div class="folio folio--portada ab-c">
-                <div class="portada-marco">
-                  <svg class="pm-estrella" aria-hidden="true"><use href="#i-estrella"/></svg>
-                  <p class="pm-a">El Libro de</p><p class="pm-b">Enoc</p><p class="pm-c">Explicado</p>
-                </div>
-              </div>
+      <ul class="bonos">
+        <li class="bono">
+          <figure class="slot bono-img" data-material="bono-01.webp" data-alt=""><div class="tapa t-noche"><span>1</span></div></figure>
+          <div><p class="bono-num">#1 – ¡BONO HOY!</p><h3>Plan de lectura de 30 días</h3><p class="bono-sub">Paso a paso</p><p>Sabrás exactamente qué leer cada día para terminar el libro sin perderte.</p></div>
+        </li>
+        <li class="bono">
+          <figure class="slot bono-img" data-material="bono-02.webp" data-alt=""><div class="tapa t-pergamino"><span>2</span></div></figure>
+          <div><p class="bono-num">#2 – ¡BONO HOY!</p><h3>¿Qué es y qué no es el Libro de Enoc?</h3><p class="bono-sub">Léelo con tranquilidad</p><p>Una introducción corta para leerlo sin miedo y saber responder cuando te pregunten.</p></div>
+        </li>
+        <li class="bono">
+          <figure class="slot bono-img" data-material="bono-03.webp" data-alt=""><div class="tapa t-lapis"><span>3</span></div></figure>
+          <div><p class="bono-num">#3 – ¡BONO HOY!</p><h3>Glosario de nombres y lugares</h3><p class="bono-sub">Quién es quién</p><p>Todos los ángeles, personajes y lugares de Enoc explicados en una línea.</p></div>
+        </li>
+        <li class="bono">
+          <figure class="slot bono-img" data-material="bono-04.webp" data-alt=""><div class="tapa t-noche"><span>4</span></div></figure>
+          <div><p class="bono-num">#4 – ¡BONO HOY!</p><h3>Los 7 arcángeles de Enoc</h3><p class="bono-sub">Capítulo 20 explicado</p><p>Sus nombres y su misión, según el Libro de Enoc.</p></div>
+        </li>
+        <li class="bono">
+          <figure class="slot bono-img" data-material="bono-05.webp" data-alt=""><div class="tapa t-pergamino"><span>5</span></div></figure>
+          <div><p class="bono-num">#5 – ¡BONO HOY!</p><h3>El Padre Nuestro en arameo</h3><p class="bono-sub">Explicado línea por línea</p><p>La oración que Jesús enseñó, en el idioma que Él hablaba.</p></div>
+        </li>
+        <li class="bono">
+          <figure class="slot bono-img" data-material="bono-06.webp" data-alt=""><div class="tapa t-lapis"><span>6</span></div></figure>
+          <div><p class="bono-num">#6 – ¡BONO HOY!</p><h3>Cuaderno de anotaciones</h3><p class="bono-sub">Para imprimir</p><p>Para anotar lo que aprendes en cada capítulo junto a tu Biblia.</p></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═════ 6 · Planos ═════ -->
+  <section class="s-planes" id="planes">
+    <div class="envoltura">
+      <h2 class="titulo-seccion"><span class="oro">ELIGE</span> la mejor opción para ti:</h2>
+
+      <div class="planes">
+        <article class="plan plan-basico">
+          <h3 class="plan-nombre">Plan Básico</h3>
+          <!-- [IMAGEN] — troca por materiais/plan-basico.webp -->
+          <figure class="slot plan-img" data-material="plan-basico.webp" data-alt="Plan Básico: los 108 capítulos en PDF">
+            <div class="folio folio--portada folio--plan" aria-hidden="true">
+              <div class="portada-marco"><svg class="pm-estrella"><use href="#i-estrella"/></svg><p class="pm-a">El Libro de</p><p class="pm-b">Enoc</p><p class="pm-c">Explicado</p></div>
             </div>
           </figure>
-          <div class="completo-cuerpo">
-            <p class="completo-intro">Todos los materiales en PDF <em>(recíbelos al instante)</em></p>
-            <ul class="plan-lista plan-lista--completo">
-              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Los 108 capítulos del Libro de Enoc explicados</li>
-              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Plan de lectura de 30 días</li>
-              <li><svg aria-hidden="true"><use href="#i-check"/></svg>¿Qué es y qué no es el Libro de Enoc?</li>
-              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Glosario de nombres y lugares</li>
-              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Los 7 arcángeles de Enoc</li>
-              <li><svg aria-hidden="true"><use href="#i-check"/></svg>El Padre Nuestro en arameo explicado</li>
-              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Cuaderno de anotaciones para imprimir</li>
-            </ul>
-            <p class="precio precio--completo">US$12,90</p>
-            <p class="pago">Pago único · Sin mensualidades</p>
-            <!-- TROCAR pelo link real do checkout do Plano Completo -->
-            <a class="boton boton--grande" href="#checkout-completo">QUIERO EL PLAN COMPLETO <svg aria-hidden="true"><use href="#i-flecha"/></svg></a>
-          </div>
-        </div>
-      </article>
+          <ul class="lista-check">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Los 108 capítulos del Libro de Enoc explicados (en PDF)</li>
+          </ul>
+          <p class="precio">US$7,90</p>
+          <p class="pago">Pago único</p>
+          <!-- TROCAR pelo link real do checkout do Plano Básico -->
+          <a class="boton boton--sec" href="#checkout-basico">QUIERO SOLO EL BÁSICO</a>
+          <p class="atencion"><strong>ATENCIÓN:</strong> tenemos una oferta aún más <strong>VENTAJOSA</strong> para ti. Mírala abajo. <svg aria-hidden="true"><use href="#i-abajo"/></svg></p>
+        </article>
 
-      <ul class="confianza" data-fx="surgir">
+        <article class="plan plan-completo">
+          <p class="plan-cinta">PLAN COMPLETO</p>
+          <p class="plan-incluye"><svg aria-hidden="true"><use href="#i-check"/></svg>TODOS LOS BONOS INCLUIDOS</p>
+          <!-- [IMAGEN] — troca por materiais/plan-completo.webp -->
+          <figure class="slot plan-img" data-material="plan-completo.webp" data-alt="Plan Completo: todos los materiales en PDF">
+            <div class="portada-abanico portada-abanico--plan" aria-hidden="true">
+              <div class="tapa t-lapis abanico-izq"><span>3</span></div>
+              <div class="folio folio--portada abanico-centro">
+                <div class="portada-marco"><svg class="pm-estrella"><use href="#i-estrella"/></svg><p class="pm-a">El Libro de</p><p class="pm-b">Enoc</p><p class="pm-c">Explicado</p></div>
+              </div>
+              <div class="tapa t-noche abanico-der"><span>1</span></div>
+            </div>
+          </figure>
+          <p class="plan-intro">Todos los materiales en PDF (recíbelos al instante)</p>
+          <ul class="lista-check">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Los 108 capítulos del Libro de Enoc explicados</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Plan de lectura de 30 días</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>¿Qué es y qué no es el Libro de Enoc?</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Glosario de nombres y lugares</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Los 7 arcángeles de Enoc</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>El Padre Nuestro en arameo explicado</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Cuaderno de anotaciones para imprimir</li>
+          </ul>
+          <p class="precio precio--completo">US$12,90</p>
+          <p class="pago">Pago único · Sin mensualidades</p>
+          <!-- TROCAR pelo link real do checkout do Plano Completo -->
+          <a class="boton boton--grande" href="#checkout-completo">QUIERO EL PLAN COMPLETO <svg aria-hidden="true"><use href="#i-flecha"/></svg></a>
+        </article>
+      </div>
+
+      <ul class="confianza">
         <li><svg aria-hidden="true"><use href="#i-candado"/></svg>Pago seguro</li>
         <li><svg aria-hidden="true"><use href="#i-rayo"/></svg>Acceso inmediato</li>
         <li><svg aria-hidden="true"><use href="#i-escudo"/></svg>Garantía de 7 días</li>
       </ul>
+    </div>
+  </section>
 
+  <!-- ═════ 7 · Garantia + FAQ ═════ -->
+  <section class="s-garantia">
+    <div class="envoltura estrecha">
       <div class="garantia">
-        <div class="sello" data-hilo="punto" data-hilo-lado="centro" aria-hidden="true">
-          <svg viewBox="0 0 200 200" class="sello-anillo">
-            <defs><path id="sello-circulo" d="M100 100m-72 0a72 72 0 1 1 144 0a72 72 0 1 1-144 0"/></defs>
-            <circle cx="100" cy="100" r="96" class="sello-borde"/>
-            <circle cx="100" cy="100" r="58" class="sello-interior"/>
-            <text class="sello-texto"><textPath href="#sello-circulo" textLength="440">GARANTÍA · SIETE DÍAS · GARANTÍA · SIETE DÍAS ·</textPath></text>
-          </svg>
-          <span class="sello-num">7</span>
-        </div>
-        <div class="garantia-texto" data-fx="subir">
-          <i class="marca-abs" data-hilo="nada" data-hilo-movil="riel" aria-hidden="true"></i>
+        <div class="sello" aria-hidden="true"><span>7</span><small>DÍAS</small></div>
+        <div>
           <h2>Garantía de 7 días</h2>
           <p>Si en 7 días sientes que Enoc Explicado no te ayudó a entender el Libro de Enoc, te devolvemos el 100% de tu dinero. Sin preguntas.</p>
         </div>
       </div>
 
-      <i class="marca-hilo" data-hilo="riel" aria-hidden="true"></i>
+      <h2 class="faq-titulo">Preguntas frecuentes</h2>
       <div class="faq">
-        <h2 class="faq-titulo" data-fx="subir">Preguntas frecuentes</h2>
         <details>
           <summary>¿Cómo lo recibo?</summary>
           <p>Al instante en tu correo. Lo lees en el celular, la tablet o lo imprimes.</p>
@@ -531,13 +342,6 @@
         </details>
       </div>
 
-      <i class="marca-hilo" data-hilo="riel" aria-hidden="true"></i>
-      <div class="cierre">
-        <p class="cierre-frase" data-fx="palavras">Todo el Libro de Enoc explicado capítulo por capítulo</p>
-        <!-- TROCAR pelo link real do checkout do Plano Completo -->
-        <a class="boton boton--grande boton--final" href="#checkout-completo" data-hilo="fin">QUIERO EL PLAN COMPLETO <svg aria-hidden="true"><use href="#i-flecha"/></svg></a>
-      </div>
-
       <p class="aviso">Enoc Explicado es un material de estudio independiente, no afiliado a ninguna iglesia. El Libro de Enoc no forma parte del canon de la mayoría de las Biblias católicas y evangélicas y se presenta con fines de estudio.</p>
     </div>
   </section>
@@ -546,23 +350,10 @@
 <footer class="pie">
   <div class="envoltura">
     <!-- TROCAR: nome da empresa, e-mail de suporte e os dois links -->
-    <p class="pie-linea">[Nombre de la empresa] · [Correo de soporte] · <a href="#politica-de-privacidad">Política de privacidad</a> · <a href="#terminos-de-uso">Términos de uso</a></p>
+    <p>[Nombre de la empresa] · [Correo de soporte] · <a href="#politica-de-privacidad">Política de privacidad</a> · <a href="#terminos-de-uso">Términos de uso</a></p>
     <p class="pie-meta">Este sitio no forma parte de Facebook ni de Meta Platforms, Inc.</p>
-    <p class="pie-meta">Texto bíblico: Reina-Valera 1960.</p>
   </div>
 </footer>
 
-<!-- O fio de ouro: desenhado pela rolagem (pagina.js) -->
-<svg class="hilo" id="hilo" aria-hidden="true">
-  <defs>
-    <linearGradient id="hilo-tono" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="1000"></linearGradient>
-    <radialGradient id="hilo-luz"><stop offset="0" stop-color="#F6DFA6" stop-opacity=".6"/><stop offset=".45" stop-color="#C9A55E" stop-opacity=".18"/><stop offset="1" stop-color="#C9A55E" stop-opacity="0"/></radialGradient>
-  </defs>
-  <path class="hilo-trazo" stroke="url(#hilo-tono)"/>
-  <circle class="hilo-halo" r="16"/>
-  <circle class="hilo-punta" r="3.2"/>
-</svg>
-
-<div class="grano" aria-hidden="true"></div>
 </body>
 </html>
