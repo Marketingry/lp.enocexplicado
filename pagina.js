@@ -110,7 +110,6 @@
         img.className = "material";
         img.alt = slot.dataset.alt || "";
         img.decoding = "async";
-        img.loading = "lazy";
         img.onload = function () {
           slot.appendChild(img);
           slot.classList.add("con-material");
